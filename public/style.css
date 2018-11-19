@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Actor|Arvo');
+.navColor {
+  background-color: #1c1c1d;
+}
+.logo {
+  width: 175px;
+  margin-left: 30px;
+  margin-top: 7px;
+}
+.navbar {
+  transition: top 0.5s
+}
+
+.homepage {
+  font-family: 'Arvo', serif;
+}
+.firstImage {
+  height: 607px;
+  width:100%;
+  display: block
+}
+.secondImage {
+  width: 100%;
+  height: 235px;
+  background-color: black;
+  color: white;
+}
+.second {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #1f1d1d;
+  vertical-align: middle;
+  text-align: center;
+  padding: 5px 10px;
+}
+.thirdImage {
+  width: 100%;
+  height: 350px;
+}
+.imagesDesc {
+  width:50%; 
+  height: 350px;
+  display: block;
+  box-shadow: 0 0 10px 2px #000000;
+  float: left;
+}
+.leftDesc {
+  width: 50%;
+  margin: 0 auto;
+  vertical-align: middle;
+  height: 350px;
+  padding: 20px 20px;
+}
+.rightDesc {
+  width: 50%;
+  margin: 0 auto;
+  vertical-align: middle;
+  height: 350px;
+  padding: 20px 20px;
+  text-align:right;
+}
+.colortheme {
+  color: #3A8740;
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #1c1c1d;
+  color:white;
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
+.lesson {
+  width: 45%;
+  height: 547px;
+  background-color: #232327;
+  border-color: transparent;  
+  color:white;
+  float:left;
+  overflow-y: scroll;
+}
+.lessonbody {
+  margin-right: 35px;
+  margin-left: 35px;
+}
+
+.editor {
+  width: 55%;
+  height: 602px;
+  border-color: transparent;
+  float: right;
+  padding-top: 10px;
+}
+.linenumbers {
+  margin-top: 45px;
+  float: left;
+  width: 3%;
+  text-align: right;
+  margin-right:1px;
+}
+.texteditor {
+  float: right;
+  width: 96%;
+  height: 300px;
+  resize: none;
+  margin-top: 10px;
+  margin-bottom: 20px
+}
+
+h5 {
+  font-family: 'Arvo', serif;
+  font-size: 26px;
+}
+p {
+  font-size: 17px;
+}
+.chapterTitle {
+  font-weight: bold;
+}
+.indent {
+  margin-left: 25px;
+}
+.codeblock {
+  background-color: #1f1d1d;
+  width: 100%;
+  display: inline-block;
+  position:relative;
+}
+.codes {
+  margin-left: 13px;
+  margin-right: 13px;
+  vertical-align: middle;
+  font-family: Consolas, monaco, monospace;
+  font-size: 15px;
+}
+.comments {
+  color: rgb(28, 165, 28);
+  display: inline;
+}
+.types {
+  color: rgb(233, 95, 95);
+  display: inline;
+  font-family: Consolas, monaco, monospace;
+}
+.views {
+  color: rgb(238, 51, 222);
+  display: inline;
+  font-family: Consolas, monaco, monospace;
+}
+.terms {
+  color: rgb(81, 136, 207);
+  font-weight: bold;
+  display: inline;
+}
+.bolds {
+  font-weight: bold;
+  display: inline;
+}
