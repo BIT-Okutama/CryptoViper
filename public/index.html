@@ -51,5 +51,59 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script src="js/lib/tether.min.js"></script>
+    <script src="js/lib/jquery-3.2.1.min.js"></script>
+    <script src="js/lib/js.cookie-2.1.4.min.js"></script>
+    <script src="js/bootstrap-4-beta/js/popper.min.js"></script>
+    <script src="js/bootstrap-4-beta/js/bootstrap.min.js"></script>
+    <script src="js/ace-127/ace.js"></script>
+    <script src="js/api-1.0.10.js"></script>
+    <script>
+      $(document).ready(function() {
+        API.init();   
+        
+        $('#myTab').on('shown.bs.tab', function(e) {
+          API.abiEditor.resize()
+          API.lllEditor.resize()
+        });
+        
+        $('#exampleDropdown a').click(function(e) {
+          API.loadExample($(this).data('example'), true);
+          $("#filename").val("my_file");
+          e.preventDefault();
+        });
+        
+        $('#compileBtn').click(function() {
+          API.load();
+        });
+        
+        $('#saveBtn').click(function() {
+          download($("#filename").val() + ".vy", ace.edit("editor").getValue())
+        });
+      });
+      
+      function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+      }
+      
+      window.addEventListener("dragover", function(e) {
+        e = e || event;
+        e.preventDefault();
+      }, false);
+      window.addEventListener("drop", function(e) {
+        e = e || event;
+        e.preventDefault();
+      }, false);
+    </script>
   </body>
 </html>
