@@ -41,11 +41,10 @@ class Lesson_9 extends Component {
         </div>
         <div class="editor">
           <Link to="/lesson_7" ><a class="waves-effect waves-light btn green right"><i class="material-icons right">send</i>Check Answer</a></Link>
-          <p class="linenumbers">
-            1<br></br> 2<br></br> 3<br></br> 4<br></br> 5<br></br> 6<br></br> 7<br></br> 8<br></br> 9<br></br> 10<br></br> 11<br></br> 12<br></br>
-          </p>
-          <div class="input-field col s12">
-            <textarea id="last_name" type="text" class="texteditor validate"></textarea>
+          <div class="tab-content">
+            <div class="tab-pane active" id="editorTab" role="tabpanel">
+              <div id="editor"></div>
+            </div>
           </div>
           <h5>Result: </h5>
         </div>
