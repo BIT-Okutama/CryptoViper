@@ -24,7 +24,7 @@ class HomePage extends Component {
           <div class="right rightDesc">
             <br></br><br></br><br></br>
             <h4 class="colortheme">Build a Viper</h4>
-            <p>You will build a Viper Factory to build your own viper. You will define the DNA of each viper you create. Each DNA corresponds to a different appearance. test</p>
+            <p>You will build a Viper Factory to build your own viper. You will define the DNA of each viper you create. Each DNA corresponds to a different appearance. </p>
           </div>
         </div>
       </div>
