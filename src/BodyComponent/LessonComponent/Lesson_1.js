@@ -33,13 +33,15 @@ class Lesson_1 extends Component {
           </div>
         </div>
         <div class="editor">
-          <Link to="/lesson_2" ><a class="waves-effect waves-light btn green right"><i class="material-icons right">send</i>Check Answer</a></Link>
+        <button type="button" id="compileBtn" class="btn btn-secondary">Compile</button>
+          <Link to="/lesson_2" ><a id="compileBtn" class="waves-effect waves-light btn green right"><i class="material-icons right">send</i>Check Answer</a></Link>
+
           <div class="tab-content">
             <div class="tab-pane active" id="editorTab" role="tabpanel">
               <div id="editor"></div>
             </div>
           </div>
-          <h5>Result: </h5>
+          
         </div>
         <footer class="footer">
           <ul class="pagination right">
