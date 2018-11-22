@@ -15,11 +15,10 @@ class Lesson_12 extends Component {
 
             <br></br>
             <h5>Let's test it</h5>
-            <p> Let's fill in the body of our <div class="types">_generateRandomDna</div> function! Here's what it should do: </p>
-
             <p class="indent"> 
-              1. The first line of code should take the keccak256 hash of _str to generate a random hexadecimal, typecast it as a <div class="types">uint256</div>, and finally store the result in a <div class="types">uint256</div> called rand. <br></br>
-              2. We want our DNA to only be 16 digits long (remember our <div class="types">dnaModulus</div>?). So the second line of code should return the above value modulus (%) <div class="types">dnaModulus</div>. <br></br>
+              1. Create a <div class="types">public</div> function named <div class="types">createRandomZombie</div>. It will take one parameter named _name (a <div class="types">bytes</div>). (Note: Declare this function <div class="types">public</div> just as you declared previous functions <div class="types">private</div>) <br></br>
+              2. The first line of the function should run the <div class="types">_generateRandomDna</div> function on _name, and store it in a <div class="types">uint256</div> named <div class="types">randDna</div>. <br></br>
+              3. The second line should run the <div class="types">_createZombie</div> function and pass it _name and randDna.
             </p>
           </div>
         </div>
