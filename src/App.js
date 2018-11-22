@@ -10,6 +10,9 @@ import Lesson_5 from './BodyComponent/LessonComponent/Lesson_5';
 import Lesson_6 from './BodyComponent/LessonComponent/Lesson_6';
 import Lesson_8 from './BodyComponent/LessonComponent/Lesson_8';
 import Lesson_9 from './BodyComponent/LessonComponent/Lesson_9';
+import Lesson_10 from './BodyComponent/LessonComponent/Lesson_10';
+import Lesson_11 from './BodyComponent/LessonComponent/Lesson_11';
+import Lesson_12 from './BodyComponent/LessonComponent/Lesson_12';
 
 class App extends Component {
   render() {
@@ -26,6 +29,9 @@ class App extends Component {
           <Route name="Lesson_6" exact path="/Lesson_6/" component={Lesson_6} />
           <Route name="Lesson_8" exact path="/Lesson_8/" component={Lesson_8} />
           <Route name="Lesson_9" exact path="/Lesson_9/" component={Lesson_9} />
+          <Route name="Lesson_10" exact path="/Lesson_10/" component={Lesson_10} />
+          <Route name="Lesson_11" exact path="/Lesson_11/" component={Lesson_11} />
+          <Route name="Lesson_12" exact path="/Lesson_12/" component={Lesson_12} />
         </div>
       </Router> 
     )
