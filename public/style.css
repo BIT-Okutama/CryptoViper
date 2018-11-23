@@ -1,16 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Actor|Arvo');
-.navColor {
-  background-color: #1c1c1d;
-}
-.logo {
-  width: 175px;
-  margin-left: 30px;
-  margin-top: 7px;
-}
-.navbar {
-  transition: top 0.5s
-}
-
 .homepage {
   font-family: 'Arvo', serif;
 }
@@ -65,50 +53,20 @@
   font-weight: bold;
 }
 
-footer {
+
+
+
+.navColor {
   background-color: #1c1c1d;
-  color:white;
-  position:absolute;
-  bottom:0;
-  width:100%;
 }
-
-.lesson {
-  width: 45%;
-  height: 865px;
-  background-color: #232327;
-  border-color: transparent;  
-  color:white;
-  float:left;
-  overflow-y: scroll;
+.logo {
+  width: 175px;
+  margin-left: 30px;
+  margin-top: 7px;
 }
-.lessonbody {
-  margin-right: 35px;
-  margin-left: 35px;
+.navbar {
+  transition: top 0.5s
 }
-
-.editor {
-  width: 55%;
-  height: 602px;
-  border-color: transparent;
-  float: right;
-  padding-top: 10px;
-}
-#editor, #abiReadable, #lll {
-  border: 1px solid #ddd;
-  height:500px;
-  margin-top: 40px;
-  width: 100%;
-}
-
-.wrap { 
-   white-space: pre-wrap;      /* CSS3 */   
-   white-space: -moz-pre-wrap; /* Firefox */    
-   white-space: -pre-wrap;     /* Opera <7 */   
-   white-space: -o-pre-wrap;   /* Opera 7 */    
-   word-wrap: break-word;      /* IE */
-}
-
 
 h5 {
   font-family: 'Arvo', serif;
@@ -117,6 +75,7 @@ h5 {
 p {
   font-size: 17px;
 }
+
 .chapterTitle {
   font-weight: bold;
 }
@@ -125,37 +84,103 @@ p {
 }
 .codeblock {
   background-color: #1f1d1d;
-  width: 100%;
-  display: inline-block;
-  position:relative;
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px;
 }
 .codes {
-  margin-left: 13px;
-  margin-right: 13px;
   vertical-align: middle;
-  font-family: Consolas, monaco, monospace;
-  font-size: 15px;
 }
 .comments {
   color: rgb(28, 165, 28);
-  display: inline;
 }
 .types {
   color: rgb(233, 95, 95);
-  display: inline;
-  font-family: Consolas, monaco, monospace;
 }
 .views {
   color: rgb(238, 51, 222);
-  display: inline;
-  font-family: Consolas, monaco, monospace;
 }
 .terms {
   color: rgb(81, 136, 207);
+}
+.bolds, .terms {
   font-weight: bold;
+}
+.views, .types, .codes{
+  font-family: Consolas, monaco, monospace;
+  font-size: 13px;
+}
+.comments, .types, .views, .terms, .bolds {
   display: inline;
 }
-.bolds {
-  font-weight: bold;
-  display: inline;
+
+.body{
+  width: 80%;
+}
+
+.tab{
+  width:50%;
+}
+
+.body, .lesson, .editor {
+  margin: auto;
+  margin-top: 30px;
+}
+
+.cbtn{
+  border: 1px solid #3A8740;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Arvo', serif;
+}
+.cbtn1{
+  color: #3A8740;
+}
+.cbtn1:hover{
+  color: #fff;
+}
+.cbtn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #3A8740;
+  z-index: -1;
+  transition: 0.8s;
+}
+.cbtn1::before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.cbtn1:hover::before{
+  height: 180%;
+}
+
+#editor, #abiReadable, #lll {
+  border: 1px solid #ddd;
+  height:500px;
+  width: 100%;
+}
+.wrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+
+footer {
+  background-color: #1c1c1d;
+  color:white;
+  position:absolute;
+  bottom:0;
+  width:100%;
 }
