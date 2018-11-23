@@ -5,8 +5,15 @@ class Lesson_10 extends Component {
   render() {
     return (
       <div>
-        <div class="lesson">
-          <div class="lessonbody">
+        <div class="body">
+          <div class="tabheader center">
+            <ul class="tabs">
+              <li class="tab"><a class="active" href="#lessonTab">See Instructions Here</a></li>
+              <li class="tab"><a href="#editorTab">Write Your Answers Here</a></li>
+            </ul>
+          </div>
+
+          <div id="lessonTab">
             <h5 class="chapterTitle"> Chapter 10: More on Functions </h5>
             <p> In this chapter, we're going to learn about Function <div class="terms">return values</div> and <div class="terms">access modifiers</div>. </p>
             
@@ -16,7 +23,7 @@ class Lesson_10 extends Component {
               <p class="codes">
                 <div class="comments"># This is a simple function:</div> <br></br>
                 <div class="views">@public</div> <br></br>
-                <div class="views">def</div> functionName(parameterName: <div class="types">uint256</div>) -> <div class="">bytes</div>: <br></br>
+                <div class="views">def</div> functionName(parameterName: <div class="types">uint256</div>) -> <div class="types">bytes</div>: <br></br>
                 &ensp;&ensp;return "I am bytes" <br></br>
               </p>
             </div>
@@ -36,16 +43,20 @@ class Lesson_10 extends Component {
               2. The function body should be empty at this point — we'll fill it in later. <br></br>
             </p>
           </div>
-        </div>
-        <div class="editor">
-          <Link to="/lesson_7" ><a class="waves-effect waves-light btn green right"><i class="material-icons right">send</i>Check Answer</a></Link>
-          <div class="tab-content">
-            <div class="tab-pane active" id="editorTab" role="tabpanel">
-              <div id="editor"></div>
+
+          <div id="editorTab">
+            <p> This is the editor, you can type your answer here. If your answer is correct, you can proceed to the next level. Good luck!</p>
+            <div class="editor">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="editorTab" role="tabpanel">
+                    <div id="editor"></div>
+                  </div>
+                </div>
             </div>
+            <button type="button" id="compileBtn" class="cbtn cbtn1 right">Compile</button>
           </div>
-          <h5>Result: </h5>
         </div>
+
         <footer class="footer">
           <ul class="pagination right">
             <li class="waves-effect"><Link to="/lesson_9" ><i class="material-icons">chevron_left</i></Link></li>

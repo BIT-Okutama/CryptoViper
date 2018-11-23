@@ -90,6 +90,7 @@ p {
 }
 .codes {
   vertical-align: middle;
+  color: white;
 }
 .comments {
   color: rgb(28, 165, 28);

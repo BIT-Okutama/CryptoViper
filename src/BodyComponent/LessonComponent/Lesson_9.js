@@ -5,8 +5,15 @@ class Lesson_9 extends Component {
   render() {
     return (
       <div>
-        <div class="lesson">
-          <div class="lessonbody">
+        <div class="body">
+          <div class="tabheader center">
+            <ul class="tabs">
+              <li class="tab"><a class="active" href="#lessonTab">See Instructions Here</a></li>
+              <li class="tab"><a href="#editorTab">Write Your Answers Here</a></li>
+            </ul>
+          </div>
+
+          <div id="lessonTab">
             <h5 class="chapterTitle"> Chapter 9: Working with Structs and Arrays </h5>
             <p>Remember our <div class="types">Person</div> list struct in the previous example?</p>
             <div class="codeblock">
@@ -36,18 +43,21 @@ class Lesson_9 extends Component {
               1. Create a function <div class="types">createViper</div>.It should take 2 parameters: _name(<div class="types">bytes32</div>) and _dna(<div class="types">uint256</div>). <br></br> 
               2. Fill in the function body so it creates a new Viper. The <div class="types">name</div> and <div class="types">dna</div> for the new Viper should come from the function arguments. This would be our first viper so the index will be 0. <br></br>
             </p>
+          </div>
 
-          </div>
-        </div>
-        <div class="editor">
-          <Link to="/lesson_7" ><a class="waves-effect waves-light btn green right"><i class="material-icons right">send</i>Check Answer</a></Link>
-          <div class="tab-content">
-            <div class="tab-pane active" id="editorTab" role="tabpanel">
-              <div id="editor"></div>
+          <div id="editorTab">
+            <p> This is the editor, you can type your answer here. If your answer is correct, you can proceed to the next level. Good luck!</p>
+            <div class="editor">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="editorTab" role="tabpanel">
+                    <div id="editor"></div>
+                  </div>
+                </div>
             </div>
+            <button type="button" id="compileBtn" class="cbtn cbtn1 right">Compile</button>
           </div>
-          <h5>Result: </h5>
         </div>
+
         <footer class="footer">
           <ul class="pagination right">
             <li class="waves-effect"><Link to="/lesson_8" ><i class="material-icons">chevron_left</i></Link></li>

@@ -5,8 +5,15 @@ class Lesson_11 extends Component {
   render() {
     return (
       <div>
-        <div class="lesson">
-          <div class="lessonbody">
+        <div class="body">
+          <div class="tabheader center">
+            <ul class="tabs">
+              <li class="tab"><a class="active" href="#lessonTab">See Instructions Here</a></li>
+              <li class="tab"><a href="#editorTab">Write Your Answers Here</a></li>
+            </ul>
+          </div>
+
+          <div id="lessonTab">
             <h5 class="chapterTitle"> Chapter 11: Keccak256 and Typecasting </h5>
             <p> We want our <div class="types">_generateRandomDna</div> function to return a random <div class="types">uint</div>. To accomplish this, we can use the <div class="types">sha3</div> function. </p>
             <p> Ethereum has the hash function <div class="types">keccak256</div> built in, which is a version of SHA3. In Vyper, this hash function is named as <div class="types">sha3</div>. A hash function basically maps an input into a random 256-bit hexidecimal number. A slight change in the input will cause a large change in the hash. </p>
@@ -38,16 +45,20 @@ class Lesson_11 extends Component {
               2. We want our DNA to only be 16 digits long (remember our <div class="types">dnaModulus</div>?). So the second line of code should return the above value modulus (%) <div class="types">dnaModulus</div>. <br></br>
             </p>
           </div>
-        </div>
-        <div class="editor">
-          <Link to="/lesson_7" ><a class="waves-effect waves-light btn green right"><i class="material-icons right">send</i>Check Answer</a></Link>
-          <div class="tab-content">
-            <div class="tab-pane active" id="editorTab" role="tabpanel">
-              <div id="editor"></div>
+
+          <div id="editorTab">
+            <p> This is the editor, you can type your answer here. If your answer is correct, you can proceed to the next level. Good luck!</p>
+            <div class="editor">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="editorTab" role="tabpanel">
+                    <div id="editor"></div>
+                  </div>
+                </div>
             </div>
+            <button type="button" id="compileBtn" class="cbtn cbtn1 right">Compile</button>
           </div>
-          <h5>Result: </h5>
         </div>
+
         <footer class="footer">
           <ul class="pagination right">
             <li class="waves-effect"><Link to="/lesson_10" ><i class="material-icons">chevron_left</i></Link></li>

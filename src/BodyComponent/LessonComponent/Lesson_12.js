@@ -5,8 +5,15 @@ class Lesson_12 extends Component {
   render() {
     return (
       <div>
-        <div class="lesson">
-          <div class="lessonbody">
+        <div class="body">
+          <div class="tabheader center">
+            <ul class="tabs">
+              <li class="tab"><a class="active" href="#lessonTab">See Instructions Here</a></li>
+              <li class="tab"><a href="#editorTab">Write Your Answers Here</a></li>
+            </ul>
+          </div>
+
+          <div id="lessonTab">
             <h5 class="chapterTitle"> Chapter 12: Completing our Code </h5>
             
             <p> We're close to being done with our random Viper generator! Let's create a public function that ties everything together. </p>
@@ -21,16 +28,20 @@ class Lesson_12 extends Component {
               3. The second line should run the <div class="types">_createZombie</div> function and pass it _name and randDna.
             </p>
           </div>
-        </div>
-        <div class="editor">
-          <Link to="/lesson_7" ><a class="waves-effect waves-light btn green right"><i class="material-icons right">send</i>Check Answer</a></Link>
-          <div class="tab-content">
-            <div class="tab-pane active" id="editorTab" role="tabpanel">
-              <div id="editor"></div>
+
+          <div id="editorTab">
+            <p> This is the editor, you can type your answer here. If your answer is correct, you can proceed to the next level. Good luck!</p>
+            <div class="editor">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="editorTab" role="tabpanel">
+                    <div id="editor"></div>
+                  </div>
+                </div>
             </div>
+            <button type="button" id="compileBtn" class="cbtn cbtn1 right">Compile</button>
           </div>
-          <h5>Result: </h5>
         </div>
+
         <footer class="footer">
           <ul class="pagination right">
             <li class="waves-effect"><Link to="/lesson_11" ><i class="material-icons">chevron_left</i></Link></li>
