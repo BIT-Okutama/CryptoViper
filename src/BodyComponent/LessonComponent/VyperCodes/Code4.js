@@ -1,10 +1,17 @@
 var code = {
-    code: 
+    initialCode: 
+    " \
+        #Overwrite this comment with the correct name and description \
+        \
+        viperDNADigits: public(uint256) \
+        \
+        #declare you struct here \
+    ",
+    correctCode: 
     " \
         #CryptoViper, a smart contract for our CryptoViper game. \
         \
         viperDNADigits: public(uint256) \
-        dnaModulos: public(uint256) \
         \
         Viper: public(&#123; \
             name: bytes32, \

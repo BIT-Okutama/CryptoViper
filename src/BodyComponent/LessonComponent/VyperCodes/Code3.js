@@ -1,5 +1,11 @@
 var code = {
-    code: 
+    initialCode: 
+    " \
+        #Overwrite this comment with the correct name and description \
+        \
+        #declare the variable here \
+    ",
+    correctCode: 
     " \
         #CryptoViper, a smart contract for our CryptoViper game. \
         \
