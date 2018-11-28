@@ -3,6 +3,18 @@ import { Link } from 'react-router-dom';
 import code from './VyperCodes/Code2';
 
 class Lesson_2 extends Component {
+  constructor() {
+    super()
+    this.state = {
+    };
+  }
+
+  handleSubmitPosition(e) {
+    var result = this.refs.ABI.innerText.localeCompare(code.ABI);
+    alert(result);
+    e.preventDefault();
+  }
+
   render() {
     return (
       <div>
@@ -39,17 +51,24 @@ class Lesson_2 extends Component {
             <p class="indent"> 1. In the editor in the right, add a <div class="types">comment</div> on the very first line. The comment should contain the <div class="bolds">name</div> of the contract and the <div class="bolds">description</div>. This would help other users to easily understand your code. </p>
             <p> When you're finished, click "check answer". </p> 
           </div>
-
-          <div id="editorTab">
-            <p> This is the editor, you can type your answer here. If your answer is correct, you can proceed to the next level. Good luck!</p>
-            <div class="editor">
-                <div class="tab-content">
-                  <div class="tab-pane active" id="editorTab" role="tabpanel">
-                    <div id="editor">{ code.initialCode }</div>
-                  </div>
+          <div class="forms">
+            <form onSubmit={this.handleSubmitPosition.bind(this)}>
+              <div id="editorTab">
+                <p> This is the editor, you can type your answer here. If your answer is correct, you can proceed to the next level. Good luck!</p>
+                <div class="editorBox">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="editorTab" role="tabpanel">
+                        <div ref="usercode" id="editor">{ code.initialCode }</div>
+                      </div>
+                    </div>
                 </div>
-            </div>
-            <button type="button" id="compileBtn" class="cbtn cbtn1 right">Compile</button>
+
+                <button type="submit" class="cbtn right">Submit</button>
+                <button type="button" id="compileBtn" class="cbtn2 right">Compile</button>
+
+                <div ref="ABI" id="abiCompact" class="abi-box"></div>
+              </div>
+            </form>
           </div>
         </div>
         
@@ -63,4 +82,5 @@ class Lesson_2 extends Component {
     )
   }
 }
+
 export default Lesson_2;

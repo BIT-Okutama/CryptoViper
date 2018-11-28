@@ -6,7 +6,7 @@ var code = {
 viperDNADigits: public(uint256)\n\
 dnaModulos: public(uint256)\n\n\
 \
-Viper: public({\n\n\
+Viper: public({\n\
     name: bytes32,\n\
     dna: uint256\n\
 }[10])\n\n\

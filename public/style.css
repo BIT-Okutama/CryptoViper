@@ -123,13 +123,12 @@ p {
   width:50%;
 }
 
-.body, .lesson, .editor {
+.body, .lesson, .editorBox {
   margin: auto;
   margin-top: 30px;
 }
 
-.cbtn{
-  border: 1px solid #3A8740;
+.cbtn, .cbtn2 {
   background: none;
   padding: 10px 20px;
   font-size: 20px;
@@ -141,28 +140,38 @@ p {
   overflow: hidden;
   font-family: 'Arvo', serif;
 }
-.cbtn1{
-  color: #3A8740;
+.cbtn{
+  border: 1px solid #3A8740;
+  color: #3A8740;  
 }
-.cbtn1:hover{
+.cbtn2{
+  border: 1px solid #008ECC;
+  color: #008ECC;
+}
+.cbtn:hover, .cbtn2:hover {
   color: #fff;
 }
-.cbtn::before{
+.cbtn::before, .cbtn2::before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.cbtn:hover::before, .cbtn2:hover::before{
+  height: 180%;
+}
+.cbtn::before, .cbtn2::before{
   content: "";
   position: absolute;
   left: 0;
   width: 100%;
   height: 0%;
-  background: #3A8740;
   z-index: -1;
   transition: 0.8s;
 }
-.cbtn1::before {
-  top: 0;
-  border-radius: 0 0 50% 50%;
+.cbtn2::before{
+  background: #008ECC;
 }
-.cbtn1:hover::before{
-  height: 180%;
+.cbtn::before{
+  background: #3A8740;
 }
 
 #editor, #abiReadable, #lll {
@@ -176,6 +185,8 @@ p {
    white-space: -pre-wrap;     /* Opera <7 */   
    white-space: -o-pre-wrap;   /* Opera 7 */    
    word-wrap: break-word;      /* IE */
+}
+.abi-box {
 }
 
 footer {

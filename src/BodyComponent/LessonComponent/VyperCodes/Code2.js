@@ -1,7 +1,8 @@
 var code = {
-    initialCode: "#Overwrite this comment with the correct name and description",
+    initialCode: 
+    "#Write your comment here.",
     correctCode: "#CryptoViper, a smart contract for our CryptoViper game.",
-    ABI: ''
+    ABI: 'list index out of range'
 }
 
 export default code;

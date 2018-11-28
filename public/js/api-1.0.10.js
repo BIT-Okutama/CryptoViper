@@ -29,20 +29,7 @@ var API = (function(API, $, undefined) {
       dataType: 'json',
       data: this.params,
       success: function(data) {
-        if (data.result.json_code === 200 && data.result.abi_code === 200) {
-          $('#abiResult').html('<i class="fa fa-check" aria-hidden="true"></i>')
-        } else {
-          $('#abiResult').html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i>')
-        }
         $('#abiCompact').html(data.result.json)
-        var abiVal = null
-        if (data.result.abi_code === 200) {
-          abiVal = JSON.stringify(data.result.abi, null, 4)
-        } else {
-          abiVal = data.result.abi
-        }
-        API.editor.setValue(abiVal)
-        API.editor.clearSelection()
       },
       fail: function() {
         $('#result').html("Mah.")
