@@ -12,30 +12,6 @@ var API = (function(API, $, undefined) {
     'source': ""
   }
   
-  API.loadExample = function(example, showConfirm) {
-    var confirmed = true;
-    if (showConfirm) {
-      var loadMsg = "Current editor contents will be lost! Continue?";
-      confirmed = confirm(loadMsg);
-    }
-    
-    if (confirmed) {
-      let reqURL
-      if (example.substr(0, 4) === 'http') {
-        reqURL = example;
-      } else {
-        reqURL = EXAMPLE_URL + example;
-      }
-      $.get(reqURL , function(data) {
-        API.editor.setValue(data);
-        API.editor.clearSelection();
-      })
-      .fail(function(e) {
-        alert("Example from resource " + reqURL + " could not be loaded!");
-      })
-    }
-  }
-  
   API.setCompileToUnknown = function() {
     $('#abiResult').html('<i class="fa fa-question-circle" aria-hidden="true"></i>')
     $('#lllResult').html('<i class="fa fa-question-circle" aria-hidden="true"></i>')
@@ -80,19 +56,6 @@ var API = (function(API, $, undefined) {
     this.editor = ace.edit("editor");
     this.editor.setTheme("ace/theme/crimson_editor");
     this.editor.getSession().setMode("ace/mode/vyper"); 
-    
-    if (localStorage.getItem("currentDocument")) {
-      this.editor.setValue(localStorage.getItem("currentDocument"));
-      this.editor.clearSelection();
-    } else {
-      API.loadExample('voting/ballot.vy', false);
-    }
-    
-    
-    this.editor.getSession().on('change', function(e) {
-      API.setCompileToUnknown();
-      localStorage.setItem("currentDocument", API.editor.getValue());
-    });
   }
   
   return API;

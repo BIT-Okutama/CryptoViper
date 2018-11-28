@@ -64,6 +64,7 @@
         API.init();   
         
         $('#myTab').on('shown.bs.tab', function(e) {
+          API.editor.setValue();
           API.abiEditor.resize()
           API.lllEditor.resize()
         });
