@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import code from './VyperCodes/Code12';
 
 class Lesson_12 extends Component {
   render() {
@@ -34,7 +35,7 @@ class Lesson_12 extends Component {
             <div class="editor">
                 <div class="tab-content">
                   <div class="tab-pane active" id="editorTab" role="tabpanel">
-                    <div id="editor"></div>
+                    <div id="editor">{ code.initialCode }</div>
                   </div>
                 </div>
             </div>
