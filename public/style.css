@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Actor|Arvo');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway');
 .homepage {
-  font-family: 'Arvo', serif;
 }
 .firstImage {
   height: 607px;
@@ -49,15 +48,23 @@
 }
 .colortheme {
   color: #3A8740;
-  font-family: 'Arvo', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
 
+.tabs .tab a {
+  color: rgba(58, 135, 64, 0.616);
+}
 
-
+.tabs .tab a:hover, .tabs .tab a.active {
+  background-color: transparent;
+  color: #3A8740;
+  border-bottom-color: #3A8740;
+}
 
 .navColor {
   background-color: white;
+  box-shadow: 0 0;
 }
 .logo {
   width: 175px;
@@ -69,7 +76,7 @@
 }
 
 h5 {
-  font-family: 'Arvo', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
 }
 p {
@@ -132,13 +139,12 @@ p {
   background: none;
   padding: 10px 20px;
   font-size: 20px;
-  font-family: "montserrat";
   cursor: pointer;
   margin: 10px;
   transition: 0.8s;
   position: relative;
   overflow: hidden;
-  font-family: 'Arvo', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .cbtn{
   border: 1px solid #3A8740;
@@ -148,7 +154,7 @@ p {
   border: 1px solid #008ECC;
   color: #008ECC;
 }
-.cbtn:hover, .cbtn2:hover {
+.cbtn:hover, .cbtn2:hover, i.icon-white {
   color: #fff;
 }
 .cbtn::before, .cbtn2::before {

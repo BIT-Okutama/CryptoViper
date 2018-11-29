@@ -81,9 +81,9 @@ class Lesson_9 extends Component {
 
         <footer class="footer">
           <ul class="pagination right">
-            <li class="waves-effect"><Link to="/lesson_8" ><i class="material-icons">chevron_left</i></Link></li>
-            <li class="active"><a href="#!">9</a></li>
-            <li class="waves-effect"><Link to="/lesson_10" ><i class="material-icons">chevron_right</i></Link></li>
+            <li class="waves-effect"><Link to="/lesson_8" ><i class="material-icons icon-white">chevron_left</i></Link></li>
+            <li class="active"><a>9</a></li>
+            <li class="waves-effect"><Link to="/lesson_10" ><i class="material-icons icon-white">chevron_right</i></Link></li>
         </ul>
         </footer>
       </div>
