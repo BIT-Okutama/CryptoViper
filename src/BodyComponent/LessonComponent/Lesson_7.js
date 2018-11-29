@@ -44,7 +44,7 @@ class Lesson_6 extends Component {
             <p> From the last lesson, we created a function where we can initialize our variables. In Vyper, we cannot initialize variables in the <div class="terms">top-level</div>. Thus, we need functions where we can intialize our variables.</p>
 
             <p class="indent"> 
-              1. Create a new variable <div class="types">uint</div> and named it to <div class="types">dnaModulos</div>.
+              1. Create a new variable <div class="types">uint</div> and named it to <div class="types">dnaModulos</div>. <br></br><br></br>
               2. Inside <div class="types">constructor</div>, set the variables: <br></br>
               <div class="indent"> 
                 # <div class="types">viperDNADigits</div> to 16 <br></br>

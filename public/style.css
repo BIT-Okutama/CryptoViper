@@ -57,7 +57,7 @@
 
 
 .navColor {
-  background-color: #1c1c1d;
+  background-color: white;
 }
 .logo {
   width: 175px;
@@ -83,7 +83,7 @@ p {
   margin-left: 25px;
 }
 .codeblock {
-  background-color: #1f1d1d;
+  background-color: #283747;
   width: 95%;
   margin: 0 auto;
   padding: 10px;
@@ -190,7 +190,7 @@ p {
 }
 
 footer {
-  background-color: #1c1c1d;
+  background-color: #2C3E50;
   color:white;
   position:absolute;
   bottom:0;

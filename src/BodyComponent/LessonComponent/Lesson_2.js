@@ -21,8 +21,8 @@ class Lesson_2 extends Component {
         <div class="body">
           <div class="tabheader center">
             <ul class="tabs">
-              <li class="tab"><a href="#lessonTab">See Instructions Here</a></li>
-              <li class="tab"><a class="active" href="#editorTab">Write Your Answers Here</a></li>
+              <li class="tab"><a class="active" href="#lessonTab">See Instructions Here</a></li>
+              <li class="tab"><a href="#editorTab">Write Your Answers Here</a></li>
             </ul>
           </div>
 
@@ -48,8 +48,8 @@ class Lesson_2 extends Component {
             <br></br>
             <h5>Let's test it</h5>
             <p> To start creating your Viper, let's create the contract. </p>
-            <p class="indent"> 1. In the editor in the right, add a <div class="types">comment</div> on the very first line. The comment should contain the <div class="bolds">name</div> of the contract and the <div class="bolds">description</div>. This would help other users to easily understand your code. </p>
-            <p> When you're finished, click "check answer". </p> 
+            <p class="indent"> 1. In the editor, add a <div class="types">comment</div> on the very first line. The comment should contain the <div class="bolds">name</div> of the contract and the <div class="bolds">description</div>. This would help other users to easily understand your code. The name is <div class="types">CryptoViper</div>, and the description is <div class="types">a smart contract for our CryptoViper game</div>.</p>
+            <p> The editor can be found on the <div class="terms">"Write Your Answer Here"</div> tab. When you're finished, please click "Compile" then "Submit". </p> 
           </div>
           <div class="forms">
             <form onSubmit={this.handleSubmitPosition.bind(this)}>

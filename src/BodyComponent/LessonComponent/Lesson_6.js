@@ -37,7 +37,7 @@ class Lesson_6 extends Component {
                 &ensp;&ensp;<div class="comments"># This is the body of the function</div> <br></br>
               </p>
             </div>
-            <p>This is a function named <div class="types">functionName</div> and a <div class="types">uint256</div> parameter. Vyper does not have brackets &#123; &#125;. To group codes, the codes should be vertically aligned. This syntax is just like <div class="terms">Python</div>. </p>
+            <p>This is a function named <div class="types">functionName</div> and a <div class="types">uint256</div> parameter. Vyper does not have brackets <div class="types">&#123; &#125;</div>. To group codes, the codes should be vertically aligned. This syntax is just like <div class="terms">Python</div>. </p>
             <p>You can call the function like this:</p>
             <div class="codeblock">
               <p class="codes">
@@ -51,7 +51,7 @@ class Lesson_6 extends Component {
             <h5>Let's test it</h5>
             <p> We need to initialize the values of our variables. Let's create a function where we could initialize all the variables.</p>
 
-            <p class="indent"> 1. Create a function named <div class="types">constructor</div>. It does not need to take any parameters.</p>
+            <p class="indent"> 1. Create a function named <div class="types">constructor</div>. It does not need to take any parameters. Add <div class="views">@public</div> before the function. We will explain what this is for on later lessons. </p>
           </div>
 
           <div class="forms">

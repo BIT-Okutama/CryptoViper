@@ -55,7 +55,7 @@ class Lesson_5 extends Component {
             <h5>Let's test it</h5>
             <p> We're going to want to make several vipers. It is good to use a list of structs for this goal. </p>
 
-            <p class="indent"> 1. Create a list of <div class="types">Viper</div> structs. Name it <div class="types">Vipers</div>. </p>
+            <p class="indent"> 1. Create a list of <div class="types">Viper</div> structs. Name it <div class="types">Vipers</div>. For the meantime, let's make this list up to <div class="types">10</div>. </p>
           </div>
 
           <div class="forms">

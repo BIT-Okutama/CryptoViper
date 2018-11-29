@@ -28,7 +28,7 @@ class Lesson_3 extends Component {
 
           <div id="lessonTab">
             <h5 class="chapterTitle"> Chapter 3: State Variables & Integers </h5>
-            <p> Great Job! Let's formally start our Smart Contract </p>
+            <p> Great Job! Let's formally start our Smart Contract. </p>
             <p> Vyper is a <div class="terms">statically typed language</div>, which means that the type of each variable (state and local) needs to be specified or at least known at compile-time. </p>
             <p> <div class="terms">State variables</div> are values which are permanently stored in contract storage. This means they're written to the Ethereum blockchain.</p>
             

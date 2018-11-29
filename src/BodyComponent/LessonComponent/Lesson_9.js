@@ -53,7 +53,7 @@ class Lesson_9 extends Component {
             <p> Let's make a createViper function. </p>
 
             <p class="indent"> 
-              1. Create a function <div class="types">createViper</div>.It should take 2 parameters: _name(<div class="types">bytes32</div>) and _dna(<div class="types">uint256</div>). <br></br> 
+              1. Create a function <div class="types">createViper</div>.It should take 2 parameters: <div class="types">_name</div>(<div class="types">bytes32</div>) and <div class="types">_dna</div>(<div class="types">uint256</div>). <br></br> <br></br> 
               2. Fill in the function body so it creates a new Viper. The <div class="types">name</div> and <div class="types">dna</div> for the new Viper should come from the function arguments. This would be our first viper so the index will be 0. <br></br>
             </p>
           </div>

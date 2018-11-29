@@ -28,7 +28,7 @@ class Lesson_10 extends Component {
 
           <div id="lessonTab">
             <h5 class="chapterTitle"> Chapter 10: More on Functions </h5>
-            <p> In this chapter, we're going to learn about Function <div class="terms">return values</div> and <div class="terms">access modifiers</div>. </p>
+            <p> In this chapter, we're going to learn about Function <div class="terms">return values</div> and <div class="terms">access modifiers</div>. </p> <br></br>
             
             <h5> Return Values </h5>
             <p> To return a value from a function, the declaration looks like this: </p>
@@ -40,19 +40,19 @@ class Lesson_10 extends Component {
                 &ensp;&ensp;return "I am bytes" <br></br>
               </p>
             </div>
-            <p>Just like in Solidity, the function declaration in Vyper contains the type of the return value (in this case <div class="types">bytes</div>).</p>
+            <p>Just like in Solidity, the function declaration in Vyper contains the type of the return value (in this case <div class="types">bytes</div>).</p> <br></br>
 
             <h5> Function Modifiers </h5>
             <p> Vyper has two access modifiers: <div class="types">@public</div> and <div class="types">@private</div>. </p>
             <p> <div class="types">@public</div> is the default modifer. It means that any program that uses your contract can call this function or variable. This is useful when you want other users to use your functions. </p>
-            <p> <div class="types">@private</div> means that only your contract can access this function or variable. This is useful when you don't want other users access your function. This is useful when protecting your data. </p>
+            <p> <div class="types">@private</div> means that only your contract can access this function or variable. This is useful when you don't want other users to access your function and to protect your data. </p>
             
             <br></br>
             <h5>Let's test it</h5>
             <p> We're going to want a helper function that generates a random DNA number from a string. </p>
 
             <p class="indent"> 
-              1. Create a  <div class="types">private</div> function called  <div class="types">_generateRandomDna</div>. It will take one parameter named _str (a <div class="types">bytes</div>), and return a <div class="types">uint</div>. <br></br>
+              1. Create a  <div class="types">private</div> function called  <div class="types">_generateRandomDna</div>. It will take one parameter named _str (a <div class="types">bytes</div>), and return a <div class="types">uint</div>. <br></br><br></br>
               2. The function body should be empty at this point — we'll fill it in later. <br></br>
             </p>
           </div>
