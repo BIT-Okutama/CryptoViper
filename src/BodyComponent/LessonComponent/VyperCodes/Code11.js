@@ -18,7 +18,7 @@ def __init__():\n\
 \
 @private\n\
 def createViper(_name: bytes32, _dna: uint256):\n\
-    self.Viper[0] = &#123; name: _name, dna: _dna &#125;\n\n\
+    self.Viper[0] = { name: _name, dna: _dna }\n\n\
 \
 @private\n\
 def generateRandomDna(_str: bytes32) -> uint256:\n\
@@ -43,7 +43,7 @@ def __init__():\n\
 \
 @private\n\
 def createViper(_name: bytes32, _dna: uint256):\n\
-    self.Viper[0] = &#123; name: _name, dna: _dna &#125;\n\n\
+    self.Viper[0] = { name: _name, dna: _dna }\n\n\
 \
 @private\n\
 def generateRandomDna(_str: bytes32) -> uint256:\n\

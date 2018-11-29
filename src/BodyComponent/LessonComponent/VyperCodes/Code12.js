@@ -18,7 +18,7 @@ def __init__():\n\
 \
 @private\n\
 def createViper(_name: bytes32, _dna: uint256):\n\
-    self.Viper[0] = &#123; name: _name, dna: _dna &#125;\n\n\
+    self.Viper[0] = { name: _name, dna: _dna }\n\n\
 \
 @private\n\
 def generateRandomDna(_str: bytes32) -> uint256:\n\
@@ -47,7 +47,7 @@ def __init__():\n\
 \
 @private\n\
 def createViper(_name: bytes32, _dna: uint256):\n\
-    self.Viper[0] = &#123; name: _name, dna: _dna &#125;\n\n\
+    self.Viper[0] = { name: _name, dna: _dna }\n\n\
 \
 @private\n\
 def generateRandomDna(_str: bytes32) -> uint256:\n\
@@ -64,4 +64,4 @@ def createRandomZombie(_name: bytes32):\n\
     ABI: '[{"name": "__init__", "outputs": [], "inputs": [], "constant": false, "payable": false, "type": "constructor"}, {"name": "createRandomZombie", "outputs": [], "inputs": [{"type": "bytes32", "name": "_name"}], "constant": false, "payable": false, "type": "function", "gas": 73849}, {"name": "viperDNADigits", "outputs": [{"type": "uint256", "name": "out"}], "inputs": [], "constant": true, "payable": false, "type": "function", "gas": 573}, {"name": "dnaModulos", "outputs": [{"type": "uint256", "name": "out"}], "inputs": [], "constant": true, "payable": false, "type": "function", "gas": 603}, {"name": "Viper__name", "outputs": [{"type": "bytes32", "name": "out"}], "inputs": [{"type": "int128", "name": "arg0"}], "constant": true, "payable": false, "type": "function", "gas": 928}, {"name": "Viper__dna", "outputs": [{"type": "uint256", "name": "out"}], "inputs": [{"type": "int128", "name": "arg0"}], "constant": true, "payable": false, "type": "function", "gas": 952}]'
 }
 
-export default code
+export default code;
