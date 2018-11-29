@@ -3,6 +3,18 @@ import { Link } from 'react-router-dom';
 import code from './VyperCodes/Code6';
 
 class Lesson_6 extends Component {
+  constructor() {
+    super()
+    this.state = {
+    };
+  }
+
+  handleSubmitPosition(e) {
+    var result = this.refs.ABI.innerText.localeCompare(code.ABI);
+    alert(result);
+    e.preventDefault();
+  }
+  
   render() {
     return (
       <div>
@@ -42,16 +54,24 @@ class Lesson_6 extends Component {
             <p class="indent"> 1. Create a function named <div class="types">constructor</div>. It does not need to take any parameters.</p>
           </div>
 
-          <div id="editorTab">
-            <p> This is the editor, you can type your answer here. If your answer is correct, you can proceed to the next level. Good luck!</p>
-            <div class="editor">
-                <div class="tab-content">
-                  <div class="tab-pane active" id="editorTab" role="tabpanel">
-                    <div id="editor">{ code.initialCode }</div>
-                  </div>
+          <div class="forms">
+            <form onSubmit={this.handleSubmitPosition.bind(this)}>
+              <div id="editorTab">
+                <p> This is the editor, you can type your answer here. If your answer is correct, you can proceed to the next level. Good luck!</p>
+                <div class="editorBox">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="editorTab" role="tabpanel">
+                        <div ref="usercode" id="editor">{ code.initialCode }</div>
+                      </div>
+                    </div>
                 </div>
-            </div>
-            <button type="button" id="compileBtn" class="cbtn cbtn1 right">Compile</button>
+
+                <button type="submit" class="cbtn right">Submit</button>
+                <button type="button" id="compileBtn" class="cbtn2 right">Compile</button>
+
+                <div ref="ABI" id="abiCompact" class="abi-box"></div>
+              </div>
+            </form>
           </div>
         </div>
 
