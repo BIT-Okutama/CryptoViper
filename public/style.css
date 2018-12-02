@@ -67,7 +67,7 @@
   box-shadow: 0 0;
 }
 .logo {
-  width: 175px;
+  width: 250px;
   margin-left: 30px;
   margin-top: 7px;
 }
@@ -193,6 +193,7 @@ p {
    word-wrap: break-word;      /* IE */
 }
 .abi-box {
+  color:white;
 }
 
 footer {

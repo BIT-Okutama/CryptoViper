@@ -10,7 +10,7 @@ class NavBar extends Component {
         <Link to="/homepage" > <img class="logo" src="logo.png"></img></Link>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><Link to="/homepage" class="colortheme" >Home </Link></li>
-          <li><Link to="/lesson_2" class="colortheme" >Play </Link></li>
+          <li><Link to="/lesson_1" class="colortheme" >Play </Link></li>
         </ul>
       </nav>
       </Headroom>
