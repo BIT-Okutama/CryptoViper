@@ -203,3 +203,16 @@ footer {
   bottom:0;
   width:100%;
 }
+
+.twenty {
+  margin-top: 80px;
+  width:20%;
+}
+
+.eighty {
+  width:80%;
+}
+
+.monster {
+	position: absolute;
+}
