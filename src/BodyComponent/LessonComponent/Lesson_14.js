@@ -19,7 +19,30 @@ class Lesson_14 extends Component {
 
             <div id="lessonTab">
                 <h5 class="chapterTitle"> Chapter 14: Deploying a contract using Web3.py</h5>
-                <p> In this chapter, we're going to learn how to deploy a contract. </p> 
+                <p> In this chapter, we're going to learn how to deploy a contract. We will use <div class="terms">Web3.py</div> to deploy our contract. You can find more information about <div class="terms">Web3.py</div> <a href="https://github.com/ethereum/web3.py">here</a>. </p> 
+
+                <p>Here is a sample code of using <div class="terms">Web3.py</div> and deploying a contract:</p>
+                <div class="codeblock">
+                    <p class="codes">
+                        from web3 import Web3, HTTPProvider <br></br>
+                        from viper import compiler <br></br>
+                        from web3.contract import ConciseContract <br></br>
+                        from time import sleep <br></br><br></br>
+
+                        example_contract = open('./path/to/CryptoViper.v.py', 'r') <br></br>
+                        contract_code = example_contract.read() <br></br>
+                        example_contract.close() <br></br><br></br>
+
+                        cmp = compiler.Compiler() <br></br>
+                        contract_bytecode = cmp.compile(contract_code).hex() <br></br>
+                        contract_abi = cmp.mk_full_signature(contract_code) <br></br><br></br>
+
+                        web3 = Web3(HTTPProvider('http://localhost:8545')) <br></br>
+                        web3.personal.unlockAccount('account_addr', 'account_pwd', 120) <br></br>
+                    </p>
+                </div>
+
+                <p>See the variable <div class="types">example_contract</div>, we just need to specify where out contract is. Then <div class="terms">Web3.py</div> will compile it and deploy it. We just need to wait where our contract is deployed and use it. </p>
                 
             </div>
 

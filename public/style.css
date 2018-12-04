@@ -118,7 +118,7 @@ p {
   font-family: Consolas, monaco, monospace;
   font-size: 13px;
 }
-.comments, .types, .views, .terms, .bolds {
+a, .comments, .types, .views, .terms, .bolds {
   display: inline;
 }
 
