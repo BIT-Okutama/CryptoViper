@@ -174,8 +174,8 @@ class Lesson_1 extends Component {
                 <img id="Mouth" class="monster" src={this.state.mouth}></img>
                 <img id="Teeth" class="monster" src={this.state.teeth}></img>
                 <img id="Eyes" class="monster" src={this.state.eyes}></img>
-                <img id="Head" class="monster" src={this.state.head}></img>
                 <img id="Tongue" class="monster" src={this.state.tongue}></img>
+                <img id="Head" class="monster" src={this.state.head}></img>
               </div>        
             </div>
         </div>
