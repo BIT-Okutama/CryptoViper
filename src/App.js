@@ -14,6 +14,8 @@ import Lesson_9 from './BodyComponent/LessonComponent/Lesson_9';
 import Lesson_10 from './BodyComponent/LessonComponent/Lesson_10';
 import Lesson_11 from './BodyComponent/LessonComponent/Lesson_11';
 import Lesson_12 from './BodyComponent/LessonComponent/Lesson_12';
+import Lesson_13 from './BodyComponent/LessonComponent/Lesson_13';
+import Lesson_14 from './BodyComponent/LessonComponent/Lesson_14';
 
 class App extends Component {
   render() {
@@ -34,6 +36,8 @@ class App extends Component {
           <Route name="Lesson_10" exact path="/Lesson_10/" component={Lesson_10} />
           <Route name="Lesson_11" exact path="/Lesson_11/" component={Lesson_11} />
           <Route name="Lesson_12" exact path="/Lesson_12/" component={Lesson_12} />
+          <Route name="Lesson_13" exact path="/Lesson_13/" component={Lesson_13} />
+          <Route name="Lesson_14" exact path="/Lesson_14/" component={Lesson_14} />
         </div>
       </Router> 
     )

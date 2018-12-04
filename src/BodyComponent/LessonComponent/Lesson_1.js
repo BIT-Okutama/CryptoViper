@@ -71,8 +71,8 @@ class Lesson_1 extends Component {
         <div class="body">
           <div class="tabheader center">
             <ul class="tabs">
-              <li class="tab"><a href="#lessonTab">See Instructions Here</a></li>
-              <li class="tab"><a class="active" href="#editorTab">Write Your Answers Here</a></li>
+              <li class="tab"><a class="active" href="#lessonTab">See Instructions Here</a></li>
+              <li class="tab"><a href="#editorTab">Write Your Answers Here</a></li>
             </ul>
           </div>
 
