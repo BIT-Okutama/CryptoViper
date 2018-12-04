@@ -105,6 +105,9 @@ class Lesson_1 extends Component {
                 <select class="browser-default" onChange={this.changeHead}>
                   <option value="Monster/Head/None.png">1</option>
                   <option value="Monster/Head/Strawhat.png">2</option>
+                  <option value="Monster/Head/Party.png">3</option>
+                  <option value="Monster/Head/Saiyan.png">4</option>
+                  <option value="Monster/Head/Santa.png">5</option>
                 </select>
 
                 <label>Eye Gene</label>
