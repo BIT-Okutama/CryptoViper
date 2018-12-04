@@ -89,7 +89,7 @@ class Lesson_1 extends Component {
             <h5>How Viper DNA Works</h5>
             <p>The zombie's appearance will be based on its "Viper DNA". Viper DNA is simple — it's a 16-digit integer, like: <div class="types">8356281049284737</div></p>
             <p>Just like real DNA, different parts of this number will map to different traits. The first 2 digits map to the viper's head type, the second 2 digits to the viper's eyes, etc.</p>
-            <p>For example, the first 2 digits of our example DNA above are <div class="types">83</div>. To map that to the viper's head type, we do <div class="types">83 % 3 = 2</div>. So this Viper would have the 2nd viper head type.</p>
+            <p>For example, the first 2 digits of our example DNA above are <div class="types">83</div>. To map that to the viper's head type, we do <div class="types">83 % 5 = 2</div>. So this Viper would have the 2nd viper head type.</p>
             <p>In the answer tab, go ahead and move the head gene slider to the 2nd head to see what trait the <div class="types">83</div> would correspond to.</p>
 
             <br></br>
