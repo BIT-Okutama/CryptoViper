@@ -4,6 +4,16 @@ import { Link } from 'react-router-dom';
 class Lesson_14 extends Component {
   constructor() {
     super()
+    this.state = {
+      head: 'Monster/Head/None.png',
+      inner: 'Monster/InnerBody/Blue.png',
+      innermost: 'Monster/InnerMostBody/Blue.png',
+      outer: 'Monster/OuterBody/Blue.png',
+      eyes: 'Monster/Eyes/White.png',
+      teeth: 'Monster/Teeth/White.png',
+      mouth: 'Monster/Mouth/Red.png',
+      tongue: 'Monster/Tongue/Black.png'
+    };
   }
   
   render() {
@@ -46,8 +56,29 @@ class Lesson_14 extends Component {
                 
             </div>
 
-            <div class="forms">
-                
+            <div id="editorTab">
+              <div class="eighty left">
+                <img id="OuterBody" class="monster" src={this.state.outer}></img>
+                <img id="InnerMostBody" class="monster" src={this.state.innermost}></img>
+                <img id="InnerBody" class="monster" src={this.state.inner}></img>
+                <img id="Mouth" class="monster" src={this.state.mouth}></img>
+                <img id="Teeth" class="monster" src={this.state.teeth}></img>
+                <img id="Eyes" class="monster" src={this.state.eyes}></img>
+                <img id="Tongue" class="monster" src={this.state.tongue}></img>
+                <img id="Head" class="monster" src={this.state.head}></img>
+              </div>    
+              <div class="twenty right">
+                <p>Head Gene: </p>
+                <p>Eye Gene: </p>
+                <p>Teeth Gene: </p>
+                <p>Mouth Gene: </p>
+                <p>Tongue Gene: </p>
+                <p>Color 1 Gene: </p>
+                <p>Color 2 Gene: </p>
+                <p>Color 3 Gene: </p>
+                <label for="last_name">Viper Name</label>
+                <input id="last_name" type="text" class="validate"></input>              
+              </div>
             </div>
         </div>
 

@@ -11,7 +11,10 @@ class Lesson_10 extends Component {
 
   handleSubmitPosition(e) {
     var result = this.refs.ABI.innerText.localeCompare(code.ABI);
-    alert(result);
+    if(result == 0)
+      alert("You are right! You can proceed to the next level. ");
+    else
+      alert("You are wrong! Please read the instructions and code again. ");
     e.preventDefault();
   }
   
