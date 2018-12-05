@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Keccak } from 'sha3';
 
 class Lesson_14 extends Component {
   constructor() {
@@ -12,8 +13,135 @@ class Lesson_14 extends Component {
       eyes: 'Monster/Eyes/White.png',
       teeth: 'Monster/Teeth/White.png',
       mouth: 'Monster/Mouth/Red.png',
-      tongue: 'Monster/Tongue/Black.png'
+      tongue: 'Monster/Tongue/Black.png',
+      gene: 0,
+      headGene: 0,
+      innerGene: 0,
+      innermostGene: 0,
+      outerGene: 0,
+      eyesGene: 0,
+      teethGene: 0,
+      mouthGene: 0,
+      tongueGene: 0
     };
+    this.convertToHash = this.convertToHash.bind(this);
+  }
+
+  convertToHash(event) {
+    event.preventDefault();
+    const hash = new Keccak(256);
+    
+    hash.reset();
+    var hashed = hash.update(event.target.value).digest('hex');
+    var gene = hashed.match(/\d/g).join("") % Math.pow(10, 16);
+    this.setState({gene: gene});
+    this.changeBody();
+  }
+
+  changeBody() {
+    var geneBody = this.state.gene.toString().substring(0, 2) % 5 +1;
+    this.setState({headGene: geneBody});
+    if(geneBody==1) {
+      this.setState({head: 'Monster/Head/None.png'});
+    } else if(geneBody==2) {
+      this.setState({head: 'Monster/Head/Strawhat.png'});
+    } else if(geneBody==3) {
+      this.setState({head: 'Monster/Head/Party.png'});
+    } else if(geneBody==4) {
+      this.setState({head: 'Monster/Head/Saiyan.png'});
+    } else if(geneBody==5) {
+      this.setState({head: 'Monster/Head/Santa.png'});
+    }
+
+    geneBody = this.state.gene.toString().substring(2, 4) % 4 +1;
+    this.setState({innerGene: geneBody});
+    if(geneBody==1) {
+      this.setState({inner: 'Monster/InnerBody/Red.png'});
+    } else if(geneBody==2) {
+      this.setState({inner: 'Monster/InnerBody/Blue.png'});
+    } else if(geneBody==3) {
+      this.setState({inner: 'Monster/InnerBody/Orange.png'});
+    } else if(geneBody==4) {
+      this.setState({inner: 'Monster/InnerBody/Green.png'});
+    } 
+
+    geneBody = this.state.gene.toString().substring(4, 6) % 4 +1;
+    this.setState({innermostGene: geneBody});
+    if(geneBody==1) {
+      this.setState({innermost: 'Monster/InnerMostBody/Red.png'});
+    } else if(geneBody==2) {
+      this.setState({innermost: 'Monster/InnerMostBody/Blue.png'});
+    } else if(geneBody==3) {
+      this.setState({innermost: 'Monster/InnerMostBody/Orange.png'});
+    } else if(geneBody==4) {
+      this.setState({innermost: 'Monster/InnerMostBody/Green.png'});
+    } 
+
+    geneBody = this.state.gene.toString().substring(6, 8) % 4 +1;
+    this.setState({outerGene: geneBody});
+    if(geneBody==1) {
+      this.setState({outer: 'Monster/OuterBody/Red.png'});
+    } else if(geneBody==2) {
+      this.setState({outer: 'Monster/OuterBody/Blue.png'});
+    } else if(geneBody==3) {
+      this.setState({outer: 'Monster/OuterBody/Orange.png'});
+    } else if(geneBody==4) {
+      this.setState({outer: 'Monster/OuterBody/Green.png'});
+    } 
+
+    geneBody = this.state.gene.toString().substring(8, 10) % 5 +1;
+    this.setState({eyesGene: geneBody});
+    if(geneBody==1) {
+      this.setState({eyes: 'Monster/Eyes/White.png'});
+    } else if(geneBody==2) {
+      this.setState({eyes: 'Monster/Eyes/Red.png'});
+    } else if(geneBody==3) {
+      this.setState({eyes: 'Monster/Eyes/Blue.png'});
+    } else if(geneBody==4) {
+      this.setState({eyes: 'Monster/Eyes/Orange.png'});
+    } else if(geneBody==5) {
+      this.setState({eyes: 'Monster/Eyes/Green.png'});
+    } 
+
+    geneBody = this.state.gene.toString().substring(10, 12) % 5 +1;
+    this.setState({teethGene: geneBody});
+    if(geneBody==1) {
+      this.setState({teeth: 'Monster/Teeth/White.png'});
+    } else if(geneBody==2) {
+      this.setState({teeth: 'Monster/Teeth/Red.png'});
+    } else if(geneBody==3) {
+      this.setState({teeth: 'Monster/Teeth/Blue.png'});
+    } else if(geneBody==4) {
+      this.setState({teeth: 'Monster/Teeth/Orange.png'});
+    } else if(geneBody==5) {
+      this.setState({teeth: 'Monster/Teeth/Green.png'});
+    } 
+
+    geneBody = this.state.gene.toString().substring(12, 14) % 4 +1;
+    this.setState({mouthGene: geneBody});
+    if(geneBody==1) {
+      this.setState({mouth: 'Monster/Mouth/Red.png'});
+    } else if(geneBody==2) {
+      this.setState({mouth: 'Monster/Mouth/Blue.png'});
+    } else if(geneBody==3) {
+      this.setState({mouth: 'Monster/Mouth/Orange.png'});
+    } else if(geneBody==4) {
+      this.setState({mouth: 'Monster/Mouth/Green.png'});
+    } 
+
+    geneBody = this.state.gene.toString().substring(14, 16) % 5 +1;
+    this.setState({tongueGene: geneBody});
+    if(geneBody==1) {
+      this.setState({tongue: 'Monster/Tongue/Black.png'});
+    } else if(geneBody==2) {
+      this.setState({tongue: 'Monster/Tongue/Red.png'});
+    } else if(geneBody==3) {
+      this.setState({tongue: 'Monster/Tongue/Blue.png'});
+    } else if(geneBody==4) {
+      this.setState({tongue: 'Monster/Tongue/Orange.png'});
+    } else if(geneBody==5) {
+      this.setState({tongue: 'Monster/Tongue/Green.png'});
+    } 
   }
   
   render() {
@@ -68,16 +196,16 @@ class Lesson_14 extends Component {
                 <img id="Head" class="monster" src={this.state.head}></img>
               </div>    
               <div class="twenty right">
-                <p>Head Gene: </p>
-                <p>Eye Gene: </p>
-                <p>Teeth Gene: </p>
-                <p>Mouth Gene: </p>
-                <p>Tongue Gene: </p>
-                <p>Color 1 Gene: </p>
-                <p>Color 2 Gene: </p>
-                <p>Color 3 Gene: </p>
+                <p>Head Gene: <div class="types"> {this.state.headGene} </div> </p>
+                <p>Eye Gene: <div class="types"> {this.state.innerGene} </div> </p>
+                <p>Teeth Gene: <div class="types"> {this.state.innermostGene} </div> </p>
+                <p>Mouth Gene: <div class="types"> {this.state.outerGene} </div> </p>
+                <p>Tongue Gene: <div class="types"> {this.state.eyesGene} </div> </p>
+                <p>Color 1 Gene: <div class="types"> {this.state.teethGene} </div> </p>
+                <p>Color 2 Gene: <div class="types"> {this.state.mouthGene} </div> </p>
+                <p>Color 3 Gene: <div class="types"> {this.state.tongueGene} </div> </p>
                 <label for="last_name">Viper Name</label>
-                <input id="last_name" type="text" class="validate"></input>              
+                <input id="last_name" onChange={this.convertToHash} type="text" class="validate"></input> 
               </div>
             </div>
         </div>
