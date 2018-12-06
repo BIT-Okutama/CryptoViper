@@ -171,6 +171,7 @@ class Lesson_14 extends Component {
     this.state.ContractInstance.finishGame(
       {gas: 300000}, (err,result) => 
       {console.log(result);})
+    alert("Congratulations! You finished the game.")
     e.preventDefault();
   }  
   
