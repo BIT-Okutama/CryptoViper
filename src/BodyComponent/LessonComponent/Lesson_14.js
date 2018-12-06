@@ -166,9 +166,12 @@ class Lesson_14 extends Component {
 
   handleNextLevel(e) {
     this.state.ContractInstance.updatePlayerLevel(
-      parseInt(2), {gas: 300000}, (err,result) => 
+      parseInt(14), {gas: 300000}, (err,result) => 
+      {console.log(result);});
+    this.state.ContractInstance.finishGame(
+      {gas: 300000}, (err,result) => 
       {console.log(result);})
-      e.preventDefault();
+    e.preventDefault();
   }  
   
   render() {
