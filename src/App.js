@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Web3 from 'web3';
 import NavBar from './HeaderComponent/NavBar';
 import HomePage from './BodyComponent/HomePage';
 import Lesson_1 from './BodyComponent/LessonComponent/Lesson_1';
@@ -17,37 +16,13 @@ import Lesson_11 from './BodyComponent/LessonComponent/Lesson_11';
 import Lesson_12 from './BodyComponent/LessonComponent/Lesson_12';
 import Lesson_13 from './BodyComponent/LessonComponent/Lesson_13';
 import Lesson_14 from './BodyComponent/LessonComponent/Lesson_14';
-import contract from './Contract/Contract';
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
     }
-
-    //Initializes the Web3 connection instance.
-    if(typeof window.web3 != 'undefined'){
-      console.log("Using web3 detected from external source like Metamask");
-      window.web3 = new Web3(window.web3.currentProvider);
-    }
-    
-    else {
-      window.web3 = new Web3(new 
-      Web3.providers.HttpProvider("http://localhost:8545"));
-    }
-
-    //Sets the account, for it to be recognized by Metamask 
-    window.web3.eth.defaultAccount = window.web3.eth.accounts[0]
-
-    //Sets the contract connection for the instance.
-    const MyContract = window.web3.eth.contract(contract.ABI);
-    this.state.ContractInstance = MyContract.at(contract.address);
-    
-   // this.state.ContractInstance.addPlayer(
-   //   {gas: 300000}, (err,result) => 
-   //   {console.log(result);})
   }
-
 
   render() {
     return (
