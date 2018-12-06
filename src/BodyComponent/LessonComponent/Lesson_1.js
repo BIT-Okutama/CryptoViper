@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Web3 from 'web3';
+import contract from '../../Contract/Contract';
 
 class Lesson_1 extends Component {
   constructor() {
@@ -23,6 +25,24 @@ class Lesson_1 extends Component {
     this.changeMouth = this.changeMouth.bind(this);
     this.changeTongue = this.changeTongue.bind(this);
     this.changeEyes = this.changeEyes.bind(this);
+
+    //Initializes the Web3 connection instance.
+    if(typeof window.web3 != 'undefined'){
+      console.log("Using web3 detected from external source like Metamask");
+      window.web3 = new Web3(window.web3.currentProvider);
+    }
+    
+    else {
+      window.web3 = new Web3(new 
+      Web3.providers.HttpProvider("http://localhost:8545"));
+    }
+
+    //Sets the account, for it to be recognized by Metamask 
+    window.web3.eth.defaultAccount = window.web3.eth.accounts[0]
+
+    //Sets the contract connection for the instance.
+    const MyContract = window.web3.eth.contract(contract.ABI);
+    this.state.ContractInstance = MyContract.at(contract.address);
   }
 
   changeHead(event) {
@@ -63,6 +83,13 @@ class Lesson_1 extends Component {
   changeEyes(event) {
     event.preventDefault();
     this.setState({eyes: event.target.value});
+  }
+
+  handleNextLevel(e) {
+    this.state.ContractInstance.updatePlayerLevel(
+      parseInt(1), {gas: 300000}, (err,result) => 
+      {console.log(result);})
+      e.preventDefault();
   }
 
   render() {
@@ -184,10 +211,10 @@ class Lesson_1 extends Component {
         </div>
       
         <footer class="footer">
-          <ul class="pagination right">
-            <li class="active"><a>1</a></li>
-            <li class="waves-effect"><Link to="/lesson_2" ><i class="material-icons icon-white">chevron_right</i></Link></li>
-          </ul>
+            <ul class="pagination right">
+              <li class="active"><a>1</a></li>
+              <li class="waves-effect" onClick={this.handleNextLevel.bind(this)}><Link to="/lesson_2" ><i class="material-icons icon-white">chevron_right</i></Link></li>
+            </ul>
         </footer>
       </div>
     )

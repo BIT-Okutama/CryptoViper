@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Keccak } from 'sha3';
+import Web3 from 'web3';
+import contract from '../../Contract/Contract';
 
 class Lesson_14 extends Component {
   constructor() {
@@ -25,6 +27,24 @@ class Lesson_14 extends Component {
       tongueGene: 0
     };
     this.convertToHash = this.convertToHash.bind(this);
+
+    //Initializes the Web3 connection instance.
+    if(typeof window.web3 != 'undefined'){
+      console.log("Using web3 detected from external source like Metamask");
+      window.web3 = new Web3(window.web3.currentProvider);
+    }
+    
+    else {
+      window.web3 = new Web3(new 
+      Web3.providers.HttpProvider("http://localhost:8545"));
+    }
+
+    //Sets the account, for it to be recognized by Metamask 
+    window.web3.eth.defaultAccount = window.web3.eth.accounts[0]
+
+    //Sets the contract connection for the instance.
+    const MyContract = window.web3.eth.contract(contract.ABI);
+    this.state.ContractInstance = MyContract.at(contract.address);
   }
 
   convertToHash(event) {
@@ -143,6 +163,13 @@ class Lesson_14 extends Component {
       this.setState({tongue: 'Monster/Tongue/Green.png'});
     } 
   }
+
+  handleNextLevel(e) {
+    this.state.ContractInstance.updatePlayerLevel(
+      parseInt(2), {gas: 300000}, (err,result) => 
+      {console.log(result);})
+      e.preventDefault();
+  }  
   
   render() {
     return (
@@ -214,7 +241,7 @@ class Lesson_14 extends Component {
           <ul class="pagination right">
             <li class="waves-effect"><Link to="/lesson_13" ><i class="material-icons icon-white">chevron_left</i></Link></li>
             <li class="active"><a>14</a></li>
-            <li class="waves-effect disabled"><Link to="/lesson_14" ><i class="material-icons">chevron_right</i></Link></li>
+            <li class="waves-effect" onClick={this.handleNextLevel.bind(this)}><Link to="/homepage" ><i class="material-icons icon-white">chevron_right</i></Link></li>
         </ul>
         </footer>
       </div>
