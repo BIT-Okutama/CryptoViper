@@ -2,31 +2,27 @@
 .homepage {
 }
 .firstImage {
-  height: 607px;
+  height: 920px;
   width:100%;
   display: block
 }
 .secondImage {
   width: 100%;
   height: 235px;
-  background-color: black;
+  background-color: rgb(33, 47, 61);
   color: white;
 }
 .second {
   width: 70%;
   margin: 0 auto;
-  background-color: #1f1d1d;
+  background-color: #2C3E50;
   vertical-align: middle;
   text-align: center;
   padding: 5px 10px;
 }
-.thirdImage {
-  width: 100%;
-  height: 350px;
-}
 .imagesDesc {
   width:50%; 
-  height: 350px;
+  height: 450px;
   display: block;
   box-shadow: 0 0 10px 2px #000000;
   float: left;
@@ -35,15 +31,15 @@
   width: 50%;
   margin: 0 auto;
   vertical-align: middle;
-  height: 350px;
-  padding: 20px 20px;
+  height: 450px;
+  padding: 90px 20px;
 }
 .rightDesc {
   width: 50%;
   margin: 0 auto;
   vertical-align: middle;
-  height: 350px;
-  padding: 20px 20px;
+  height: 450px;
+  padding: 90px 20px;
   text-align:right;
 }
 .colortheme {
