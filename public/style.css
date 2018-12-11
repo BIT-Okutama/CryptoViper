@@ -189,7 +189,7 @@ a, .comments, .types, .views, .terms, .bolds {
    word-wrap: break-word;      /* IE */
 }
 .abi-box {
-  color:black;
+  color:white;
 }
 
 footer {
