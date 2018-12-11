@@ -26,7 +26,7 @@ Viper: public({\n\
 @public\n\
 def constructor():\
 ",
-    ABI: ""
+    ABI: "unexpected EOF while parsing (<unknown>, line 12)"
 }
 
 export default code;

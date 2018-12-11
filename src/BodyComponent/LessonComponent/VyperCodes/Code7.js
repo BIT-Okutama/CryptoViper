@@ -12,7 +12,7 @@ Viper: public({\n\
 }[10])\n\n\
 \
 @public\n\
-def constructor:\n\
+def constructor():\n\
     #write the function's code here\
 ",
     correctCode: 
@@ -28,7 +28,7 @@ Viper: public({\n\n\
 }[10])\n\n\
 \
 @public\n\
-def constructor:\n\
+def constructor():\n\
     self.viperDNADigits = 16\n\
     self.dnaModulos = 10 ** self.viperDNADigits\n\
 ",
