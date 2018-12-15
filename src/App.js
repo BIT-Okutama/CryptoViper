@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import NavBar from './HeaderComponent/NavBar';
 import HomePage from './BodyComponent/HomePage';
+import Certificate from './BodyComponent/Certificate';
 import Lesson_1 from './BodyComponent/LessonComponent/Lesson_1';
 import Lesson_2 from './BodyComponent/LessonComponent/Lesson_2';
 import Lesson_3 from './BodyComponent/LessonComponent/Lesson_3';
@@ -30,6 +31,7 @@ class App extends Component {
         <div>
           <NavBar />
           <Route name="homepage" exact path="/homepage/" component={HomePage} />
+          <Route name="certificate" exact path="/certificate/" component={Certificate} />
           <Route name="Lesson_1" exact path="/Lesson_1/" component={Lesson_1} />
           <Route name="Lesson_2" exact path="/Lesson_2/" component={Lesson_2} />
           <Route name="Lesson_3" exact path="/Lesson_3/" component={Lesson_3} />

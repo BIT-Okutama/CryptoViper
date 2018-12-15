@@ -47,6 +47,7 @@ class NavBar extends Component {
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><Link to="/homepage" class="colortheme" >Home </Link></li>
           <li onClick={this.startGame.bind(this)}><Link to="/lesson_1" class="colortheme" >Play </Link></li>
+          <li><Link to="/certificate" class="colortheme" >Certificate </Link></li>
         </ul>
       </nav>
       </Headroom>
