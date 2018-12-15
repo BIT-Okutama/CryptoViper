@@ -1,5 +1,5 @@
 var contract = {
-    address: "0x11116755d718ba6a59fd6762ab6ff07358f84657",
+    address: "0x147ddf4180fe488e8683ebe9188f850e33de0f6b",
     ABI: [
         {
             "constant": false,
@@ -323,6 +323,20 @@ var contract = {
             "constant": true,
             "inputs": [],
             "name": "getPlayerLevel",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "getPlayerRank",
             "outputs": [
                 {
                     "name": "",
