@@ -1,27 +1,56 @@
 var contract = {
-    address: "0x147ddf4180fe488e8683ebe9188f850e33de0f6b",
+    address: "0x7fcf07f704eb953e3a2101cf3ac104b66c3a62a5",
     ABI: [
         {
-            "constant": false,
+            "constant": true,
             "inputs": [
                 {
-                    "name": "account",
-                    "type": "address"
+                    "name": "interfaceId",
+                    "type": "bytes4"
                 }
             ],
-            "name": "addMinter",
-            "outputs": [],
+            "name": "supportsInterface",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
             "payable": false,
-            "stateMutability": "nonpayable",
+            "stateMutability": "view",
             "type": "function"
         },
         {
-            "constant": false,
+            "constant": true,
             "inputs": [],
-            "name": "addPlayer",
-            "outputs": [],
+            "name": "name",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "string"
+                }
+            ],
             "payable": false,
-            "stateMutability": "nonpayable",
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "tokenId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getApproved",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
             "type": "function"
         },
         {
@@ -43,12 +72,71 @@ var contract = {
             "type": "function"
         },
         {
-            "constant": false,
+            "constant": true,
             "inputs": [],
-            "name": "finishGame",
+            "name": "totalSupply",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "from",
+                    "type": "address"
+                },
+                {
+                    "name": "to",
+                    "type": "address"
+                },
+                {
+                    "name": "tokenId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "transferFrom",
             "outputs": [],
             "payable": false,
             "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "addPlayer",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "owner",
+                    "type": "address"
+                },
+                {
+                    "name": "index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "tokenOfOwnerByIndex",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
             "type": "function"
         },
         {
@@ -76,15 +164,6 @@ var contract = {
         },
         {
             "constant": false,
-            "inputs": [],
-            "name": "renounceMinter",
-            "outputs": [],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "constant": false,
             "inputs": [
                 {
                     "name": "from",
@@ -103,6 +182,174 @@ var contract = {
             "outputs": [],
             "payable": false,
             "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "tokenByIndex",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "getPlayerRank",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "level",
+                    "type": "uint256"
+                }
+            ],
+            "name": "updatePlayerLevel",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "tokenId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "ownerOf",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "owner",
+                    "type": "address"
+                }
+            ],
+            "name": "balanceOf",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "symbol",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "account",
+                    "type": "address"
+                }
+            ],
+            "name": "addMinter",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "renounceMinter",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "finishGame",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "to",
+                    "type": "address"
+                },
+                {
+                    "name": "approved",
+                    "type": "bool"
+                }
+            ],
+            "name": "setApprovalForAll",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "account",
+                    "type": "address"
+                }
+            ],
+            "name": "isMinter",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
             "type": "function"
         },
         {
@@ -132,57 +379,59 @@ var contract = {
             "type": "function"
         },
         {
-            "constant": false,
+            "constant": true,
             "inputs": [
-                {
-                    "name": "to",
-                    "type": "address"
-                },
-                {
-                    "name": "approved",
-                    "type": "bool"
-                }
-            ],
-            "name": "setApprovalForAll",
-            "outputs": [],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "constant": false,
-            "inputs": [
-                {
-                    "name": "from",
-                    "type": "address"
-                },
-                {
-                    "name": "to",
-                    "type": "address"
-                },
                 {
                     "name": "tokenId",
                     "type": "uint256"
                 }
             ],
-            "name": "transferFrom",
-            "outputs": [],
+            "name": "tokenURI",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "string"
+                }
+            ],
             "payable": false,
-            "stateMutability": "nonpayable",
+            "stateMutability": "view",
             "type": "function"
         },
         {
-            "constant": false,
-            "inputs": [
+            "constant": true,
+            "inputs": [],
+            "name": "getPlayerLevel",
+            "outputs": [
                 {
-                    "name": "level",
+                    "name": "",
                     "type": "uint256"
                 }
             ],
-            "name": "updatePlayerLevel",
-            "outputs": [],
             "payable": false,
-            "stateMutability": "nonpayable",
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "owner",
+                    "type": "address"
+                },
+                {
+                    "name": "operator",
+                    "type": "address"
+                }
+            ],
+            "name": "isApprovedForAll",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
             "type": "function"
         },
         {
@@ -280,255 +529,6 @@ var contract = {
             ],
             "name": "ApprovalForAll",
             "type": "event"
-        },
-        {
-            "constant": true,
-            "inputs": [
-                {
-                    "name": "owner",
-                    "type": "address"
-                }
-            ],
-            "name": "balanceOf",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [
-                {
-                    "name": "tokenId",
-                    "type": "uint256"
-                }
-            ],
-            "name": "getApproved",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "getPlayerLevel",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "getPlayerRank",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [
-                {
-                    "name": "owner",
-                    "type": "address"
-                },
-                {
-                    "name": "operator",
-                    "type": "address"
-                }
-            ],
-            "name": "isApprovedForAll",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bool"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [
-                {
-                    "name": "account",
-                    "type": "address"
-                }
-            ],
-            "name": "isMinter",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bool"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "name",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "string"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [
-                {
-                    "name": "tokenId",
-                    "type": "uint256"
-                }
-            ],
-            "name": "ownerOf",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [
-                {
-                    "name": "interfaceId",
-                    "type": "bytes4"
-                }
-            ],
-            "name": "supportsInterface",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bool"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "symbol",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "string"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [
-                {
-                    "name": "index",
-                    "type": "uint256"
-                }
-            ],
-            "name": "tokenByIndex",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [
-                {
-                    "name": "owner",
-                    "type": "address"
-                },
-                {
-                    "name": "index",
-                    "type": "uint256"
-                }
-            ],
-            "name": "tokenOfOwnerByIndex",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [
-                {
-                    "name": "tokenId",
-                    "type": "uint256"
-                }
-            ],
-            "name": "tokenURI",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "string"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "totalSupply",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
         }
     ]
   }

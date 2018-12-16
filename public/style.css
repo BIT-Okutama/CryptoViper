@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway|Staatliches');
 .homepage {
 }
 .firstImage {
@@ -114,7 +114,7 @@ p {
   font-family: Consolas, monaco, monospace;
   font-size: 13px;
 }
-a, .comments, .types, .views, .terms, .bolds {
+a, .comments, .types, .views, .terms, .bolds, .rankNumber {
   display: inline;
 }
 
@@ -211,4 +211,27 @@ footer {
 
 .monster {
 	position: absolute;
+}
+
+.rank {
+  font-family: 'Staatliches', cursive;
+  color: #3A8740;
+  font-size: 100px;
+}
+
+.rankNumber {
+  color: #FDDD00;
+  font-size: 450px;
+}
+
+.certificateImage {
+  height: 15%;
+  width:15%;
+  display: inline;
+}
+
+.rankDescription {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }

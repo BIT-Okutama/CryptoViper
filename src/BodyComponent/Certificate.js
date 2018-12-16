@@ -43,10 +43,11 @@ class Certificate extends Component {
         <br></br>
         <br></br>
         <br></br>
-        <h1>Rank {this.state.rank}</h1>
-        <p>
+        <h1 class="rank">Rank <div class="rankNumber">{this.state.rank}</div> <img class="certificateImage" src="Certificate.png"></img> </h1>
+        <p class="rankDescription">
             Congratulations for finishing the game! Your rank is {this.state.rank}. <br></br>
-            This rank represents your position over all the finishers of the game around the world.
+            You earned an ERC 721 Token representing your rank. <br></br>
+            This represents your position over all the finishers of the game around the world.
         </p>
       </div>
     )
